@@ -1,0 +1,31 @@
+[user]
+	name = Onkur Sen
+	email = onkursen@gmail.com
+[color]
+	diff = auto
+	status = auto
+	ui = 1
+[color "diff"]
+       meta = blue bold
+       frag = magenta bold
+       old = red
+       new = green
+[color "status"]
+       added = green
+       changed = blue bold
+       untracked = red
+[alias]
+	st = status -sb
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	dc = diff --cached
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+[core]
+	editor = subl -w
+[push]
+	default = matching
