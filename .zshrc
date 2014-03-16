@@ -73,3 +73,5 @@ alias much="g"
 alias so="g"
 alias very="g"
 alias wow="g st"
+
+alias gpwd="openssl rand -base64 32"
