@@ -1,7 +1,7 @@
 ## Dotfiles
 
-* .zshrc
-* .gitconfig
+* `.zshrc`: relies on `~/utils/z.sh` and `~/utils/aliases.sh`
+* `.gitconfig`
 
 ## Commands
 
