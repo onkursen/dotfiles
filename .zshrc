@@ -9,25 +9,12 @@ plugins=(osx git sublime python npm emacs brew heroku)
 
 source $ZSH/oh-my-zsh.sh
 source ~/utils/z.sh
+source ~/utils/aliases.sh
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 
-# Added by the Heroku Toolbelt
-export PATH=/usr/local/heroku/bin:$PATH
-
-alias scp="rsync -avzP"
-alias grep="grep --color="
-alias df='df -h'
-alias du='du -h -c'
-alias patch="patch -p1 < "
-alias ack="ack -ir"
-alias grep="ack -ir"
-
-alias such="g"
-alias much="g"
-alias so="g"
-alias very="g"
-alias wow="g st"
+# Fixes rvm and zsh issue
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
 # Customization for Heroku and rvm
 export PATH=/usr/local/heroku/bin:\

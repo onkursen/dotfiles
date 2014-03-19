@@ -1,2 +1,3 @@
 cp ~/.zshrc .
 cp ~/.gitconfig .
+cp ~/utils/aliases.sh .
