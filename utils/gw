@@ -1,0 +1,15 @@
+#!/bin/bash
+# vi: ft=sh
+CURRENT=`pwd`
+ROOTID=`stat '/' | egrep 'Inode:' | ruby -e 'STDIN.readlines.each {|l| puts l.match(/Inode: (\d+)/)[1] }'`
+while [[ ! -x "$CURRENT/gradlew" ]]; do
+    #echo "TESTING: $CURRENT"
+    CURRENTID=`stat "$CURRENT" | egrep 'Inode:' | ruby -e 'STDIN.readlines.each {|l| puts l.match(/Inode: (\d+)/)[1] }'`
+    #echo "IDS: $ROOTID $CURRENTID"
+    if [[ "$CURRENTID" == "$ROOTID" ]]; then
+        echo "Could not findup ./gradlew" 1>&2;
+        exit 1;
+    fi
+    CURRENT="$CURRENT/.."
+done
+$CURRENT/gradlew --daemon "$@"

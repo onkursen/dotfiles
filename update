@@ -1,3 +1,4 @@
 cp ~/.zshrc .
 cp ~/.gitconfig .
-cp ~/utils/aliases.sh .
+rm -rf utils
+cp -r ~/utils .
