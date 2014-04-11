@@ -49,7 +49,7 @@ alias .....="cd ......"
 
 alias edit="emacs ~/.zshrc"
 alias reload="source ~/.zshrc"
-alias aliases="emacs ~/utils/aliases.sh"
+alias gconfig="emacs ~/.gitconfig"
 
 alias a="ack"
 alias df="df -h"
