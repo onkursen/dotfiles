@@ -9,7 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="fino-time"
 
 # oh-my-zsh plugins located in ~/.oh-my-zsh/plugins/
-plugins=(osx git sublime python npm emacs brew heroku)
+plugins=()
 
 # -----------------------
 # SOURCING EXTERNAL FILES
@@ -43,23 +43,31 @@ $HOME/.rvm/bin
 # ALIASES
 # -------
 
-alias ....="cd ...."
-alias .....="cd ....."
-alias .....="cd ......"
-
 alias edit="emacs ~/.zshrc"
 alias reload="source ~/.zshrc"
 alias gconfig="emacs ~/.gitconfig"
 
+alias ....="cd ...."
+alias .....="cd ....."
+alias .....="cd ......"
 alias a="ack"
+alias c="cat"
 alias df="df -h"
 alias du="du -hc"
+alias e="echo"
+alias g="git"
+alias gst="git status -sb"
+alias gpull="git pull"
+alias gpush="git push"
 alias gpwd="openssl rand -base64 32"
 alias j="z"
 alias m="mysql"
 alias mr="mysql -uroot -p"
 alias o="open"
 alias p="python"
+alias pc="pbcopy"
 alias pweb="python -m SimpleHTTPServer $1"
 alias patch="patch -p1 < "
+alias rr="rm -rf"
 alias scp="rsync -avzP"
+alias t="tail"
