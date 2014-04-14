@@ -21,6 +21,7 @@
 	ci = commit
 	br = branch
 	b = branch -a
+	cl = clean -df
 	co = checkout
 	df = diff
 	dc = diff --cached
