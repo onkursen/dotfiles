@@ -17,20 +17,24 @@
 [alias]
 	a = add
 	aa = add --all
-	st = status -sb
-	ci = commit
-	br = branch
+	ap = add -p
 	b = branch -a
+	br = branch
+	ci = commit
 	cl = clean -df
 	co = checkout
-	df = diff
+	d = diff --color-words
 	dc = diff --cached
+	df = diff
 	f = fetch -p
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
+	pl = pull
+	ps = push
+	rb = rebase
+	rs = reset
+	st = status -sb
 [core]
-	editor = subl -w
+	editor = emacs
 [push]
 	default = matching
