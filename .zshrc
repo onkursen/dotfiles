@@ -39,6 +39,21 @@ $PATH:\
 /opt/X11/bin:\
 $HOME/.rvm/bin
 
+# ---------------
+# CUSTOM COMMANDS
+# ---------------
+
+# If no argument, equivalent to "cd .."
+# Otherwise, moves up n directories, where n is the first argument
+up() {
+    back=""
+    for i in $(seq 1 $1)
+    do
+        back+="../"
+    done
+    cd $back
+}
+
 # -------
 # ALIASES
 # -------
