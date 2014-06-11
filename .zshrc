@@ -54,6 +54,14 @@ up() {
     cd $back
 }
 
+# Undo last commit but preserve changes
+# No arguments
+undo-commit() {
+    diff_against_previous_commit=$(git diff HEAD~1)
+    git reset --hard HEAD~1
+    echo $diff_against_previous_commit | patch -p1
+}
+
 # -------
 # ALIASES
 # -------
