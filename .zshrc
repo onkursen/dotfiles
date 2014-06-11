@@ -68,7 +68,8 @@ undo-commit() {
 
 alias edit="emacs ~/.zshrc"
 alias reload="source ~/.zshrc"
-alias gconfig="emacs ~/.gitconfig"
+alias git-config="emacs ~/.gitconfig"
+alias ssh-config="emacs ~/.ssh/config"
 
 alias a="ack"
 alias c="cat"
@@ -85,7 +86,7 @@ alias o="open"
 alias p="python"
 alias pc="pbcopy"
 alias pweb="python -m SimpleHTTPServer $1"
-alias patch="patch -p1 < "
+alias p1="patch -p1 < "
 alias rr="rm -rf"
 alias scp="rsync -avzP"
 alias t="tail"
