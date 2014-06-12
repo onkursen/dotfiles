@@ -24,17 +24,18 @@
 	cl = clean -df
 	co = checkout
 	cp = cherry-pick
-	d = diff --color-words
 	dc = diff --cached
 	df = diff
 	f = fetch -p
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	ls = ls-files
-	rename = branch -m
 	pl = pull
 	ps = push
+	r = remote -v
 	rb = rebase
+	rename = branch -m
 	rs = reset
+	s = stash
 	st = status -sb
 [core]
 	editor = emacs
