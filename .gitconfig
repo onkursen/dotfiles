@@ -20,6 +20,7 @@
 	ap = add -p
 	b = branch -a
 	br = branch
+	c = clone
 	ci = commit
 	cl = clean -df
 	co = checkout

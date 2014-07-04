@@ -52,6 +52,7 @@ up() {
         back+="../"
     done
     cd $back
+    unset back
 }
 
 # Undo last commit but preserve changes
@@ -60,6 +61,18 @@ undo-commit() {
     diff_against_previous_commit=$(git diff HEAD~1)
     git reset --hard HEAD~1
     echo $diff_against_previous_commit | patch -p1
+    unset diff_against_previous_commit
+}
+
+pass() {
+    full_password=$(gpwd)
+    if [ "$1" -eq "" ]
+    then
+	echo $full_password
+    else
+	echo ${full_password:0:$1}
+    fi
+    unset full_password
 }
 
 # -------
