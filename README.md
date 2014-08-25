@@ -7,13 +7,13 @@
 
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) (`fino-time` theme)
 * [rvm](http://rvm.io/) to kill the error message for zsh
-* [brew](http://brew.sh/)
-  * [git](http://git-scm.com/): `brew install git`
-  * [ack](http://beyondgrep.com/): `brew install ack`
-  * wget: `brew install wget`
-  * emacs: `brew install emacs`
+* [brew](http://brew.sh/): `brew install git ack wget emacs`
+  * [git](http://git-scm.com/)
+  * [ack](http://beyondgrep.com/)
+  * [wget](http://www.gnu.org/software/wget/)
+  * [emacs](http://www.gnu.org/software/emacs/)
 * [s](http://www.sublimetext.com/): `ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl ~/utils/s`
-* [z](https://github.com/rupa/z): `mkdir ~/utils; curl -o ~/utils/z.sh -s https://raw.github.com/rupa/z/master/z.sh`
+* [z](https://github.com/rupa/z): `curl -o ~/utils/z.sh -s https://raw.github.com/rupa/z/master/z.sh`
 * [node.js and npm](http://nodejs.org/)
 * [meteor](https://www.meteor.com/) and [meteorite](https://github.com/oortcloud/meteorite/)
 
@@ -42,3 +42,4 @@
 * [CCleaner](https://www.piriform.com/CCLEANER)
 * [VLC](www.videolan.org/vlc/download-macosx.html)
 * [AppCleaner](http://www.freemacsoft.net/appcleaner/)
+* [MacTeX](https://tug.org/mactex/)
