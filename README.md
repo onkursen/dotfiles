@@ -16,6 +16,7 @@
 * [z](https://github.com/rupa/z): `curl -o ~/utils/z.sh -s https://raw.github.com/rupa/z/master/z.sh`
 * [node.js and npm](http://nodejs.org/)
 * [meteor](https://www.meteor.com/) and [meteorite](https://github.com/oortcloud/meteorite/)
+* [Heroku Toolbelt](https://toolbelt.heroku.com/)
 
 ## Essential apps/resources
 
@@ -27,6 +28,7 @@
 * [Spectacle](http://spectacleapp.com/)
 * [Source Code Pro font](http://sourceforge.net/projects/sourcecodepro.adobe/)
 * [Sublime Text](http://www.sublimetext.com/)
+  * [Package Control](https://sublime.wbond.net/installation)
   * [BirdsofParadise](https://github.com/jbergantine/Birds-of-Paradise-for-TextMate)
   * [Solarized](https://github.com/SublimeColors/Solarized)
 * [iTerm 2](http://www.iterm2.com/)

@@ -88,7 +88,7 @@ alias a="ack"
 alias c="cat"
 alias df="df -h"
 alias du="du -hc"
-alias e="echo"
+alias e="emacs"
 alias f="find . -name"
 alias g="git"
 alias gpwd="openssl rand -base64 32"
@@ -104,4 +104,10 @@ alias p1="patch -p1 <"
 alias rr="rm -rf"
 alias scp="rsync -avzP"
 alias ssh-copy="pbcopy < ~/.ssh/id_rsa.pub"
+alias v='valgrind --leak-check=full --show-leak-kinds=all --dsymutil=yes'
 alias t="tail"
+
+alias myth="ssh -Y onkursen@myth.stanford.edu"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
