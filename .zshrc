@@ -16,7 +16,7 @@ plugins=()
 # -----------------------
 
 source $ZSH/oh-my-zsh.sh
-source ~/utils/z.sh
+source /usr/local/bin/z.sh
 
 # Fixes rvm and zsh issue
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
@@ -92,10 +92,11 @@ alias e="emacs"
 alias f="find . -name"
 alias g="git"
 alias gpwd="openssl rand -base64 32"
+alias h="head -n"
 alias j="z"
 alias m="mysql"
-alias mr="mysql -uroot -p"
-alias n="netstat -tupan"
+alias mr="mysql -uroot"
+alias md="mysqldump -uroot"
 alias o="open"
 alias p="python"
 alias pc="pbcopy"
