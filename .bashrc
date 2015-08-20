@@ -9,11 +9,12 @@ source "${GITAWAREPROMPT}/main.sh"
 
 user="\[$txtblu\]\u@\h\[$txtrst\]"
 current_dir="\[$bldblk\]\w\[$txtrst\]"
-git_info=" \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]"
-shell="\[$bldgrn\]bash\[$txtrst\]"
+if [ -z "$git_branch" ] ; then prefix="" ; else prefix=" "; fi
+git_info="\$prefix\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]"
+shell="\[$bldylw\]bash\[$txtrst\]"
 time_s='\t'
 
-export PS1="[${user} on ${shell} in ${current_dir}${git_info} at ${time_s}]
+export PS1="[${time_s}: ${user} using ${shell} in ${current_dir}${git_info}]
 "
 
 # -------
