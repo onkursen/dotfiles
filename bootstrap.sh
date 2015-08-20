@@ -8,4 +8,5 @@ cp .functions ~
 cp .gemrc ~
 cp .gitconfig ~
 cp .vimrc ~
+cp .tmux.conf ~
 cp .zshrc ~

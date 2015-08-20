@@ -1,7 +1,4 @@
-## Dotfiles
-
-* `.zshrc`
-* `.gitconfig`
+# Onkur Sen's dotfiles
 
 ## Command-line dependencies
 
@@ -23,7 +20,6 @@
 * Command Line Tools for XCode
 * [Chrome](https://chrome.google.com)
   * [Adblock Plus](https://adblockplus.org/)
-  * [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en)
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 * [Spectacle](http://spectacleapp.com/)
 * [Source Code Pro font](http://sourceforge.net/projects/sourcecodepro.adobe/)
