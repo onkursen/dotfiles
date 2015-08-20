@@ -9,13 +9,14 @@ alias reload="source ~/.$SHELL_CONFIG"
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Easier navigation
-alias ..="cd .."
-alias ...="cd ../.."
-
 # git
 alias g="git"
 alias git-config="emacs ~/.gitconfig"
+
+# MySQL
+alias m="mysql"
+alias mr="mysql -uroot"
+alias md="mysqldump -uroot"
 
 # ssh
 alias ssh-config="emacs ~/.ssh/config"
@@ -28,18 +29,17 @@ alias tl="tmux ls"
 alias tn="tmux new -s"
 
 # General-purpose shortcuts
+alias ..="cd .."
+alias ...="cd ../.."
 alias a="ack"
 alias c="cat"
 alias df="df -h"
 alias du="du -hc"
-alias e="emacs"
+alias e="emacs -nw"
 alias f="find . -name"
 alias h="head"
 alias j="z"
 alias l="ls -lah"
-alias m="mysql"
-alias mr="mysql -uroot"
-alias md="mysqldump -uroot"
 alias n="netstat -lnptu"
 alias o="open"
 alias p="python"
