@@ -1,4 +1,0 @@
-cp ~/.zshrc .
-cp ~/.gitconfig .
-rm -rf utils
-cp -r ~/utils .
