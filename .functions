@@ -1,7 +1,8 @@
 # If no argument, equivalent to "cd .."
 # Otherwise, moves up n directories, where n is the first argument
+# Courtesy Juan Pablo Sarmiento
 up() {
-  back=""
+  local back=""
   for i in $(seq 1 $1); do back+="../"; done
   cd $back
 }
@@ -9,13 +10,14 @@ up() {
 # Undo last commit but preserve changes
 # No arguments
 undo-commit() {
-  diff_against_previous_commit=$(git diff HEAD~1)
+  local diff_against_previous_commit=$(git diff HEAD~1)
   git reset --hard HEAD~1
   echo $diff_against_previous_commit | patch -p1
 }
 
+# Generates random password of specified length
 pass() {
-  full_password=$(gpwd)
+  local full_password=$(gpwd)
   if [ "$1" -eq "" ]
   then
     echo $full_password
