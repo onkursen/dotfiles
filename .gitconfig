@@ -6,14 +6,14 @@
 	status = auto
 	ui = 1
 [color "diff"]
-       meta = blue bold
-       frag = magenta bold
-       old = red
-       new = green
+	meta = blue bold
+	frag = magenta bold
+	old = red
+	new = green
 [color "status"]
-       added = green
-       changed = blue bold
-       untracked = red
+	added = green
+	changed = blue bold
+	untracked = red
 [alias]
 	a = add
 	aa = add --all
@@ -28,7 +28,7 @@
 	dc = diff --cached
 	df = diff
 	f = fetch -p
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	ls = ls-files
 	pl = pull
 	ps = push

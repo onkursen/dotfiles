@@ -1,0 +1,25 @@
+# If no argument, equivalent to "cd .."
+# Otherwise, moves up n directories, where n is the first argument
+up() {
+  back=""
+  for i in $(seq 1 $1); do back+="../"; done
+  cd $back
+}
+
+# Undo last commit but preserve changes
+# No arguments
+undo-commit() {
+  diff_against_previous_commit=$(git diff HEAD~1)
+  git reset --hard HEAD~1
+  echo $diff_against_previous_commit | patch -p1
+}
+
+pass() {
+  full_password=$(gpwd)
+  if [ "$1" -eq "" ]
+  then
+    echo $full_password
+  else
+    echo ${full_password:0:$1}
+  fi
+}
