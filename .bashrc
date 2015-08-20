@@ -34,3 +34,7 @@ source .functions
 # ---------------------
 # BASH-SPECIFIC ALIASES
 # ---------------------
+
+# Case-insensitive tab completion
+# http://superuser.com/questions/90196
+bind "set completion-ignore-case on"
