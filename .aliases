@@ -1,48 +1,39 @@
-# ---------------------
-# OS X SPECIFIC ALIASES
-# ---------------------
-
-# OS X has no `md5sum`, so use `md5` as a fallback
-command -v md5sum > /dev/null || alias md5sum="md5"
-
-# OS X has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum > /dev/null || alias sha1sum="shasum"
-
-# Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
 # ---------------
 # GENERAL ALIASES
 # ---------------
 
-# Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
-# Configure git and ssh
-alias git-config="emacs ~/.gitconfig"
-alias ssh-config="emacs ~/.ssh/config"
+# Shell configuration
+alias edit="emacs ~/.$SHELL_CONFIG"
+alias reload="source ~/.$SHELL_CONFIG"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+
+# git
+alias g="git"
+alias git-config="emacs ~/.gitconfig"
+
+# ssh
+alias ssh-config="emacs ~/.ssh/config"
+alias ssh-copy="pbcopy < ~/.ssh/id_rsa.pub"
+alias scp="rsync -avzP"
+
+# tmux
+alias ta="tmux a -t"
+alias tl="tmux ls"
+alias tn="tmux new -s"
+
+# General-purpose shortcuts
 alias a="ack"
 alias c="cat"
 alias df="df -h"
 alias du="du -hc"
 alias e="emacs"
 alias f="find . -name"
-alias g="git"
 alias h="head"
 alias j="z"
 alias l="ls -lah"
@@ -55,10 +46,5 @@ alias pc="pbcopy"
 alias pweb="python -m SimpleHTTPServer"
 alias p1="patch -p1 <"
 alias rr="rm -rf"
-alias scp="rsync -avzP"
-alias ssh-copy="pbcopy < ~/.ssh/id_rsa.pub"
 alias v="valgrind --leak-check=full --show-leak-kinds=all --dsymutil=yes"
 alias t="tail"
-alias ta="tmux a -t"
-alias tl="tmux ls"
-alias tn="tmux new -s"

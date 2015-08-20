@@ -1,7 +1,8 @@
-cp ~/dotfiles/{.zshrc,.gitconfig} ~
+#!/bin/bash
 
 # oh-my-zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+cp onkursen.zsh-theme ~/.oh-my-zsh/themes/
 
 # ack
 sudo wget -O /usr/local/bin/ack http://beyondgrep.com/ack-2.14-single-file
