@@ -36,9 +36,9 @@ $HOME/.rvm/bin
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/bin/z.sh
-source .aliases
-source .aliases_osx
-source .functions
+source ~/.aliases
+source ~/.aliases_osx
+source ~/.functions
 
 # Fixes rvm and zsh issue
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

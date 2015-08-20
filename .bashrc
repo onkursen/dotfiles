@@ -27,9 +27,9 @@ export SHELL_CONFIG="bashrc"
 # SOURCING EXTERNAL FILES
 # -----------------------
 
-source .aliases
-source .aliases_osx
-source .functions
+source ~/.aliases
+source ~/.aliases_osx
+source ~/.functions
 
 # ---------------------
 # BASH-SPECIFIC ALIASES
