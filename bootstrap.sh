@@ -1,12 +1,8 @@
 #!/bin/bash
 
-cp .aliases ~
-cp .aliases_osx ~
-cp .bashrc ~
-cp .emacs ~
-cp .functions ~
-cp .gemrc ~
-cp .gitconfig ~
-cp .vimrc ~
-cp .tmux.conf ~
-cp .zshrc ~
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+
+for f in $(ls -a | grep -ve "\.$" | grep -ve ".git$" | grep -e "^\.")
+do
+  cp $f ~
+done
