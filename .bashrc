@@ -39,4 +39,4 @@ source ~/.functions
 # http://superuser.com/questions/90196
 bind "set completion-ignore-case on"
 
-alias ls="ls -F --color=auto"
+alias ls="ls -FG"
