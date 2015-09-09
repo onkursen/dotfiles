@@ -16,12 +16,17 @@ undo-commit() {
 }
 
 # Generates random password of specified length
+# http://www.techbar.me/linux-shell-tips/
 pass() {
-  local full_password=$(gpwd)
-  if [ "$1" -eq "" ]
-  then
-    echo $full_password
-  else
-    echo ${full_password:0:$1}
-  fi
+  LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c $1; echo
+}
+
+backup() {
+  rm -rf $1.bak
+  cp -r $1 $1.bak
+}
+
+restore() {
+  rm -rf $1
+  cp -r $1.bak $1
 }
