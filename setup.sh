@@ -183,6 +183,7 @@ brew cask install slack
 brew cask install spectacle
 
 # Add-ons
+brew cask install appcleaner
 brew cask install google-drive
 # brew cask install media-converter
 brew cask install skype
@@ -198,3 +199,6 @@ brew cask cleanup
 # oh-my-zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 cp onkursen.zsh-theme ~/.oh-my-zsh/themes/
+
+# Symlink for Sublime Text
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/s
