@@ -188,6 +188,8 @@ brew cask install spectacle
 # Add-ons
 brew cask install google-drive
 brew cask install media-converter
+brew cask install skype
+brew cask install vlc
 
 # Dev tools
 brew cask install iterm2
