@@ -130,16 +130,13 @@ brew update
 
 brew_install_or_upgrade 'zsh'
 brew_install_or_upgrade 'git'
-# brew_install_or_upgrade 'postgres'
-# brew_launchctl_restart 'postgresql'
-# brew_install_or_upgrade 'redis'
-# brew_launchctl_restart 'redis'
 brew_install_or_upgrade 'the_silver_searcher'
 brew_install_or_upgrade 'vim'
 brew_install_or_upgrade 'tmux'
 brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'ack'
 brew_install_or_upgrade 'z'
+brew_install_or_upgrade 'wget'
 
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
@@ -187,7 +184,7 @@ brew cask install spectacle
 
 # Add-ons
 brew cask install google-drive
-brew cask install media-converter
+# brew cask install media-converter
 brew cask install skype
 brew cask install vlc
 
