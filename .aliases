@@ -3,7 +3,7 @@
 # ---------------
 
 # Shell configuration
-alias edit="emacs ~/.$SHELL_CONFIG"
+alias edit="vim ~/.$SHELL_CONFIG"
 alias reload="source ~/.$SHELL_CONFIG"
 
 # Enable aliases to be sudo’ed
@@ -11,7 +11,7 @@ alias sudo='sudo '
 
 # git
 alias g="git"
-alias git-config="emacs ~/.gitconfig"
+alias git-config="vim ~/.gitconfig"
 
 # MySQL
 alias m="mysql"
@@ -19,7 +19,7 @@ alias mr="mysql -uroot"
 alias md="mysqldump -uroot"
 
 # ssh
-alias ssh-config="emacs ~/.ssh/config"
+alias ssh-config="vim ~/.ssh/config"
 alias ssh-copy="pbcopy < ~/.ssh/id_rsa.pub"
 alias scp="rsync -avzP"
 
@@ -40,6 +40,7 @@ alias f="find . -name"
 alias h="head"
 alias j="z"
 alias l="ls -lah"
+alias ll="ls -lh"
 alias n="netstat -lnptu"
 alias o="open"
 alias p="python"
@@ -47,5 +48,6 @@ alias pc="pbcopy"
 alias pweb="python -m SimpleHTTPServer"
 alias p1="patch -p1 <"
 alias rr="rm -rf"
-alias v="valgrind --leak-check=full --show-leak-kinds=all --dsymutil=yes"
+# alias v="valgrind --leak-check=full --show-leak-kinds=all --dsymutil=yes"
+alias v="vim"
 alias t="tail"
