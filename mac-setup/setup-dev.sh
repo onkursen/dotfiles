@@ -128,23 +128,17 @@ fi
 fancy_echo "Updating Homebrew formulas ..."
 brew update
 
-brew_install_or_upgrade 'zsh'
-brew_install_or_upgrade 'git'
-brew_install_or_upgrade 'the_silver_searcher'
-brew_install_or_upgrade 'vim'
-brew_install_or_upgrade 'tmux'
-brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'ack'
-brew_install_or_upgrade 'z'
-brew_install_or_upgrade 'wget'
-
+brew_install_or_upgrade 'git'
+brew_install_or_upgrade 'heroku-toolbelt'
+brew_install_or_upgrade 'openssl'
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
+brew_install_or_upgrade 'tmux'
+brew_install_or_upgrade 'vim'
+brew_install_or_upgrade 'wget'
+brew_install_or_upgrade 'zsh'
 
-# shellcheck disable=SC2016
-append_to_zshrc 'eval "$(rbenv init - --no-rehash zsh)"' 1
-
-brew_install_or_upgrade 'openssl'
 brew unlink openssl && brew link openssl --force
 
 ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
@@ -166,39 +160,5 @@ fancy_echo "Configuring Bundler ..."
   number_of_cores=$(sysctl -n hw.ncpu)
   bundle config --global jobs $((number_of_cores - 1))
 
-brew_install_or_upgrade 'heroku-toolbelt'
-
-# Install Mac applications through brew cask
-
-brew tap 'caskroom/cask'
-brew install 'brew-cask'
-
-# General-use apps for functioning setup
-brew cask install evernote
-brew cask install firefox
-brew cask install flux
-brew cask install google-chrome
-brew cask install keepassx
-brew cask install slack
-brew cask install spectacle
-
-# Add-ons
-brew cask install appcleaner
-brew cask install google-drive
-# brew cask install media-converter
-brew cask install skype
-brew cask install vlc
-
-# Dev tools
-brew cask install iterm2
-brew cask install sublime-text
-# brew cask install mactex
-
-brew cask cleanup
-
 # oh-my-zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-cp onkursen.zsh-theme ~/.oh-my-zsh/themes/
-
-# Symlink for Sublime Text
-ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/s

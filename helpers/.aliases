@@ -3,15 +3,15 @@
 # ---------------
 
 # Shell configuration
-alias edit="vim ~/.$SHELL_CONFIG"
-alias reload="source ~/.$SHELL_CONFIG"
+alias edit="vim $HOME/.${SHELL#/bin/}rc"
+alias reload="source $HOME/.${SHELL#/bin/}rc"
 
 # Enable aliases to be sudo’ed
-alias sudo='sudo '
+alias sudo="sudo "
 
 # git
 alias g="git"
-alias git-config="vim ~/.gitconfig"
+alias git-config="vim $HOME/.gitconfig"
 
 # MySQL
 alias m="mysql"
@@ -24,9 +24,15 @@ alias ssh-copy="pbcopy < ~/.ssh/id_rsa.pub"
 alias scp="rsync -avzP"
 
 # tmux
+alias tmux="tmux -f $HELPERS_DIR/.tmux.conf"
 alias ta="tmux a -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
+
+# ls
+alias ls="ls -FG"
+alias l="ls -lah"
+alias ll="ls -lh"
 
 # General-purpose shortcuts
 alias ..="cd .."
@@ -37,15 +43,13 @@ alias df="df -h"
 alias du="du -hc"
 alias e="emacs -nw"
 alias f="find . -name"
+alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
 alias h="head"
 alias j="z"
-alias l="ls -lah"
-alias ll="ls -lh"
 alias n="netstat -lnptu"
 alias o="open"
 alias p="python"
 alias pc="pbcopy"
-alias pweb="python -m SimpleHTTPServer"
 alias p1="patch -p1 <"
 alias rr="rm -rf"
 # alias v="valgrind --leak-check=full --show-leak-kinds=all --dsymutil=yes"

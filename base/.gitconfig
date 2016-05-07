@@ -33,12 +33,12 @@
 	pl = pull
 	ps = push
 	r = remote -v
-	rb = rebase
+	rb = rebase -i
 	rename = branch -m
 	rs = reset
 	s = stash
 	st = status -sb
 [core]
-	editor = emacs
+	editor = vim
 [push]
 	default = matching
