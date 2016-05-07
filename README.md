@@ -1,10 +1,13 @@
 # Onkur Sen's dotfiles
 
 These are the configuration files that I use in my daily setup.  
-For a new Mac, download XCode and command line tools if necessary and then run
-`./setup.sh`.  
-To update with the newest version of dotfiles, run `./update.sh` and then
-open a new shell.
+
+You can install using GNU Stow or by adjusting `HELPERS_DIR` in the
+preferred config file and then sourcing it.
+
+For a new Mac:
+* Download XCode and command line tools if necessary
+* Run `mac-setup/setup-dev.sh`.
 
 Released under the MIT license (see `LICENSE`).
 
