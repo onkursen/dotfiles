@@ -1,7 +1,7 @@
 # -------------------
 # COMMON DEPENDENCIES
 # -------------------
-export HELPERS_DIR=$HOME/dotfiles/helpers
+export HELPERS_DIR=$HOME/git/dotfiles/helpers
 source $HELPERS_DIR/.common
 
 # -----------------------
