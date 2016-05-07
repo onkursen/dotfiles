@@ -25,3 +25,6 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+# Colorized cat; available through homebrew
+alias cat="ccat"

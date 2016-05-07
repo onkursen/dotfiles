@@ -18,6 +18,11 @@ alias m="mysql"
 alias mr="mysql -uroot"
 alias md="mysqldump -uroot"
 
+# Ruby
+alias be="bundle exec"
+alias bers="bundle exec rails s"
+alias berc="bundle exec rails c"
+
 # ssh
 alias ssh-config="vim ~/.ssh/config"
 alias ssh-copy="pbcopy < ~/.ssh/id_rsa.pub"
@@ -33,6 +38,7 @@ alias tn="tmux new -s"
 alias ls="ls -FG"
 alias l="ls -lah"
 alias ll="ls -lh"
+alias sl="ls"
 
 # General-purpose shortcuts
 alias ..="cd .."
@@ -52,6 +58,6 @@ alias p="python"
 alias pc="pbcopy"
 alias p1="patch -p1 <"
 alias rr="rm -rf"
-# alias v="valgrind --leak-check=full --show-leak-kinds=all --dsymutil=yes"
+alias valgrind="valgrind --leak-check=full --show-leak-kinds=all --dsymutil=yes"
 alias v="vim"
 alias t="tail"

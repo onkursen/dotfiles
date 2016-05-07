@@ -6,6 +6,8 @@ source $HELPERS_DIR/.common
 
 # -----------------------
 # OH-MY-ZSH CONFIGURATION
+# Prerequisites:
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH/plugins/zsh-syntax-highlighting
 # -----------------------
 
 ZSH=$HOME/.oh-my-zsh

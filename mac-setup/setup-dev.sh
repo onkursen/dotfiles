@@ -129,8 +129,12 @@ fancy_echo "Updating Homebrew formulas ..."
 brew update
 
 brew_install_or_upgrade 'ack'
+brew_install_or_upgrade 'ccat'
+brew_install_or_upgrade 'emacs'
 brew_install_or_upgrade 'git'
 brew_install_or_upgrade 'heroku-toolbelt'
+brew_install_or_upgrade 'memcached'
+brew_install_or_upgrade 'mysql'
 brew_install_or_upgrade 'openssl'
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'

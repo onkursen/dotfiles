@@ -15,10 +15,10 @@ undo-commit() {
   echo $diff_against_previous_commit | patch -p1
 }
 
-# Generates random password of specified length
+# Generates random alphanumeric password of specified length
 # http://www.techbar.me/linux-shell-tips/
 pass() {
-  LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c $1; echo
+  LANG=c < /dev/urandom tr -dc A-Za-z0-9 | head -c $1; echo
 }
 
 backup() {
