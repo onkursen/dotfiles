@@ -2,8 +2,10 @@
 # OS X SPECIFIC ALIASES
 # ---------------------
 
+# -----------------------------------------
 # Courtesy Mathias Bynens
 # https://github.com/mathiasbynens/dotfiles
+# -----------------------------------------
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -25,6 +27,10 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+# ------------
+# My additions
+# ------------
 
 # Colorized cat; available through homebrew
 alias cat="ccat"
