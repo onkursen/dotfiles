@@ -110,6 +110,16 @@ gem_install_or_update() {
   fi
 }
 
+ask_to_install () {
+  read -p "Install/upgrade $1? " -r
+  if [[ $REPLY =~ ^[Yy]{0,1}$ ]]
+  then
+      brew_install_or_upgrade $1
+  else
+      echo "Skipping $1."
+  fi
+}
+
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
     curl -fsS \
@@ -128,41 +138,42 @@ fi
 fancy_echo "Updating Homebrew formulas ..."
 brew update
 
-brew_install_or_upgrade 'ack'
 brew_install_or_upgrade 'ccat'
 brew_install_or_upgrade 'emacs'
 brew_install_or_upgrade 'git'
-brew_install_or_upgrade 'heroku-toolbelt'
-brew_install_or_upgrade 'memcached'
-brew_install_or_upgrade 'mysql'
 brew_install_or_upgrade 'openssl'
-brew_install_or_upgrade 'rbenv'
-brew_install_or_upgrade 'ruby-build'
+brew unlink openssl && brew link openssl --force
+brew_install_or_upgrade 'the_silver_searcher'
+brew_install_or_upgrade 'stow'
 brew_install_or_upgrade 'tmux'
 brew_install_or_upgrade 'vim'
 brew_install_or_upgrade 'wget'
 brew_install_or_upgrade 'zsh'
 
-brew unlink openssl && brew link openssl --force
+ask_to_install 'heroku-toolbelt'
+ask_to_install 'memcached'
+ask_to_install 'mysql'
 
-ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
-
-eval "$(rbenv init - zsh)"
-
-if ! rbenv versions | grep -Fq "$ruby_version"; then
-  rbenv install -s "$ruby_version"
+read -p "Set up Ruby environment? " -r
+if [[ $REPLY =~ ^[Yy]{0,1}$ ]]
+then
+    brew_install_or_upgrade 'rbenv'
+    brew_install_or_upgrade 'ruby-build'
+    ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
+    eval "$(rbenv init - zsh)"
+    if ! rbenv versions | grep -Fq "$ruby_version"; then
+      rbenv install -s "$ruby_version"
+    fi
+    rbenv global "$ruby_version"
+    rbenv shell "$ruby_version"
+    gem update --system
+    gem_install_or_update 'bundler'
+    fancy_echo "Configuring Bundler ..."
+      number_of_cores=$(sysctl -n hw.ncpu)
+      bundle config --global jobs $((number_of_cores - 1))
+else
+    echo "Skipping Ruby setup."
 fi
-
-rbenv global "$ruby_version"
-rbenv shell "$ruby_version"
-
-gem update --system
-
-gem_install_or_update 'bundler'
-
-fancy_echo "Configuring Bundler ..."
-  number_of_cores=$(sysctl -n hw.ncpu)
-  bundle config --global jobs $((number_of_cores - 1))
 
 # oh-my-zsh
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh

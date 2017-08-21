@@ -1,29 +1,38 @@
+#!/bin/sh
+
+ask_to_install () {
+  read -p "Install $1? " -r
+  if [[ $REPLY =~ ^[Yy]{0,1}$ ]]
+  then
+      brew cask install $1
+  else
+      echo "Skipping $1."
+  fi
+}
+
 # Install Mac applications through brew cask
 brew tap 'caskroom/cask'
 brew install 'brew-cask'
 
-# General-use apps for functioning setup
-brew cask install evernote
+# Essential apps
+brew cask install appcleaner
 brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
-brew cask install keepassx
-brew cask install slack
+brew cask install iterm2
 brew cask install spectacle
-
-# Add-ons
-brew cask install appcleaner
-brew cask install google-drive
-# brew cask install media-converter
-brew cask install skype
+brew cask install sublime-text
 brew cask install vlc
 
-# Dev tools
-brew cask install iterm2
-brew cask install sublime-text
-# brew cask install mactex
+# Optional apps
+ask_to_install evernote
+ask_to_install google-drive
+ask_to_install mactex
+ask_to_install media-converter
+ask_to_install skype
 
 brew cask cleanup
 
 # Symlink for Sublime Text
-ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/s
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl \
+  /usr/local/bin/s
