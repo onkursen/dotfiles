@@ -5,7 +5,6 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK
 
 export PATH=\
 $HOME/.gem/ruby/2.2.0/bin:\
-$HOME/git/anaconda2/bin:\
 $PATH
 
 # Set up rbenv
@@ -18,5 +17,3 @@ source $HELPERS_DIR/.aliases_osx
 # Custom helper functions
 source $HELPERS_DIR/.functions
 
-# Temporary: for CS224U in Spring 2016
-export NLTK_DATA=$HOME/git/cs224u/nltk_data

@@ -43,7 +43,6 @@ alias sl="ls"
 # General-purpose shortcuts
 alias ..="cd .."
 alias ...="cd ../.."
-alias a="ack"
 alias c="cat"
 alias df="df -h"
 alias du="du -hc"

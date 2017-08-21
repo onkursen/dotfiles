@@ -18,27 +18,38 @@
 	a = add
 	aa = add --all
 	ap = add -p
-	b = branch -a
-	br = branch
+    b = branch -a --color -avv
+    br = branch --color -avv
 	c = clone
-	ci = commit
+    ci = commit
+    cia = commit --amend
 	cl = clean -df
 	co = checkout
-	cp = cherry-pick
-	dc = diff --cached
-	df = diff
+    cp = cherry-pick
+    dlg = !sh -c 'git lg | sed "/tag:/q"'
+    dc = diff --cached
+    delete = branch -D
+    df = diff
+    ds = !sh -c 'git diff master --stat | cat'
 	f = fetch -p
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	ls = ls-files
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
+    ls = ls-files
+    new = checkout -b
 	pl = pull
 	ps = push
 	r = remote -v
 	rb = rebase -i
 	rename = branch -m
-	rs = reset
-	s = stash
+    rc = rebase --continue
+    rs = reset
+    s = stash
+    sl = !sh -c 'git stash list | cat'
+    ssp = stash show -p
 	st = status -sb
+    sup = submodule update --init --recursive
+    up = pull --rebase --autostash
 [core]
 	editor = vim
+    excludesfile = $HOME/.gitignore_global
 [push]
 	default = matching
