@@ -59,4 +59,4 @@ inoremap <F7> <Esc>:tabprevious<CR>i
 inoremap <F8> <Esc>:tabnext<CR>i
 inoremap <F9> <Esc>:tabnew<CR>
 
-set textwidth=80
+" set textwidth=80

@@ -28,6 +28,15 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
+# ------------------------------------------------------------------
+# Courtesy oh-my-zsh
+# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/brew
+# ------------------------------------------------------------------
+alias brews='brew list -1'
+alias bubo='brew update && brew outdated'
+alias bubc='brew upgrade && brew cleanup'
+alias bubu='bubo && bubc'
+
 # ------------
 # My additions
 # ------------
