@@ -2,7 +2,7 @@
 # COMMON DEPENDENCIES
 # -------------------
 export HELPERS_DIR=$HOME/git/dotfiles/helpers
-source $HELPERS_DIR/.common
+source $HELPERS_DIR/common.sh
 
 # -----------------------
 # GIT-AWARE PROMPT

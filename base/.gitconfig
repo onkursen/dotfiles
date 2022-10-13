@@ -1,19 +1,19 @@
 [user]
-	name = Onkur Sen
-	email = onkursen@gmail.com
+    name = Onkur Sen
+    email = onkursen@gmail.com
 [color]
-	diff = auto
-	status = auto
-	ui = 1
+    diff = auto
+    status = auto
+    ui = 1
 [color "diff"]
-	meta = blue bold
-	frag = magenta bold
-	old = red
-	new = green
+    meta = blue bold
+    frag = magenta bold
+    old = red
+    new = green
 [color "status"]
-	added = green
-	changed = blue bold
-  untracked = red
+    added = green
+    changed = blue bold
+    untracked = red
 [url "git@github.com:"]
     insteadOf = gh:
     insteadOf = github:
@@ -37,15 +37,19 @@
     ds = !sh -c 'git diff master --stat=500 | cat'
     f = fetch -p --tags
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev=8
+    lgh = !sh -c 'git lg $@ | head'
     ls = ls-files
     new = checkout -b
     pl = pull --tags
+    plf = pull --tags --force --rebase --autostash --prune
     ps = push
     r = remote -v
     rb = rebase
     rbi = rebase -i
     rbm = rebase master
     rbim = rebase -i master
+    rbom = rebase origin/master
+    rbiom = rebase -i origin/master
     rename = branch -m
     rc = rebase --continue
     rs = reset
@@ -57,13 +61,19 @@
     sup = submodule update --init --recursive
     up = pull --rebase --autostash
 [core]
-	editor = vim
-	excludesfile = /Users/onkur/.gitignore_global
-  pager = "less -+F"
+    editor = vim
+    excludesfile = "~/.gitignore_global"
+    pager = "less -+F"
+    fsmonitor = True
+    untrackedcache = True
 [push]
-	default = matching
+    default = matching
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+# [commit]
+#     gpgsign = true
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/

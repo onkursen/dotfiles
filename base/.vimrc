@@ -1,6 +1,6 @@
 " VIM CONFIGURATION
 
-"Enable syntax highlighting
+" Enable syntax highlighting
 syntax on
 
 " Show line ruler
