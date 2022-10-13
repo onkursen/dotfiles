@@ -7,9 +7,9 @@
 # eval "$(rbenv init -)"
 
 # Aliases
-source $HELPERS_DIR/.aliases
-source $HELPERS_DIR/.aliases_osx
+source $HELPERS_DIR/aliases.sh
+source $HELPERS_DIR/aliases_osx.sh
 
 # Custom helper functions
-source $HELPERS_DIR/.functions
+source $HELPERS_DIR/functions.sh
 
