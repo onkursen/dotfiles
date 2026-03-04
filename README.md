@@ -7,17 +7,18 @@ preferred config file and then sourcing it.
 
 For a new Mac:
 * Download XCode and command line tools if necessary
-* Run `mac-setup/setup-dev.sh`.
+* Run `setup-mac.sh`.
 
 Released under the MIT license (see `LICENSE`).
 
 ## Add-ons after setup
 
-* [Adblock Plus Chrome Extension](https://adblockplus.org/)
-* [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro)
+* [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro/releases/latest)
+  * Download latest OTF fonts, unzip, and open to install
 * Sublime Text
   * [Solarized](https://github.com/SublimeColors/Solarized)
   * [Package Control](https://sublime.wbond.net/installation)
 * iTerm 2
-  * [Solarized](https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized)
-  * Disable "Draw bold text in bright colors" in Preferences > Profiles > Text
+  * [Spacegray Eighties theme](https://github.com/mhkeller/spacegray-eighties-iterm)
+  * Enable infinite scrollback
+  * Set font to Source Code Pro size 14

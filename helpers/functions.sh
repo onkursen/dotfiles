@@ -34,3 +34,34 @@ restore() {
   rm -rf $1
   cp -r $1.bak $1
 }
+
+remove() {
+  shred $1 && rm -v $1
+}
+
+# Delete all local git branches except `main` and branches starting with `onkur`
+git-prune-branches() {
+  local dry_run=false
+  if [[ "$1" == "--dry-run" || "$1" == "-n" ]]; then
+    dry_run=true
+  fi
+
+  local branches
+  branches=$(git branch | grep -v '^\*' | sed 's/^ *//' | grep -v '^main$' | grep -v '^onkur')
+
+  if [[ -z "$branches" ]]; then
+    echo "No branches to delete."
+    return 0
+  fi
+
+  if $dry_run; then
+    echo "Would delete the following branches:"
+    echo "$branches" | while read -r branch; do
+      echo "  $branch"
+    done
+  else
+    echo "$branches" | while read -r branch; do
+      git branch -D "$branch"
+    done
+  fi
+}

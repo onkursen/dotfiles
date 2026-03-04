@@ -14,9 +14,8 @@
     added = green
     changed = blue bold
     untracked = red
-[url "git@github.com:"]
-    insteadOf = gh:
-    insteadOf = github:
+[init]
+    defaultBranch = main
 [alias]
     a = add
     aa = add --all
@@ -67,13 +66,14 @@
     fsmonitor = True
     untrackedcache = True
 [push]
-    default = matching
+    default = current
 [filter "lfs"]
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
-# [commit]
-#     gpgsign = true
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
+[url "git@github.com:"]
+    insteadOf = gh:
+    insteadOf = github:
