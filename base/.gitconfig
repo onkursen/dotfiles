@@ -78,4 +78,4 @@
     insteadOf = gh:
     insteadOf = github:
 [include]
-    path = ${gitdir}/../local/.gitconfig
+    path = ~/.gitconfig.local
