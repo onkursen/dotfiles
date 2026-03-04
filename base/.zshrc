@@ -1,7 +1,9 @@
 # -------------------
 # COMMON DEPENDENCIES
 # -------------------
-export HELPERS_DIR="$(git rev-parse --show-toplevel)/helpers"
+# Follow the symlink to find the helpers directory.
+local RC_DIR="$(dirname "$(readlink -f "${HOME}/.zshrc")")"
+export HELPERS_DIR="$(cd "$RC_DIR/../helpers" && pwd)"
 source "${HELPERS_DIR}/common.sh"
 
 # -----------------------

@@ -1,7 +1,8 @@
 # -------------------
 # COMMON DEPENDENCIES
 # -------------------
-export HELPERS_DIR="$(git rev-parse --show-toplevel)/helpers"
+local RC_DIR="$(dirname "$(readlink -f "${HOME}/.bashrc")")"
+export HELPERS_DIR="$(cd "$RC_DIR/../helpers" && pwd)"
 source $HELPERS_DIR/common.sh
 
 # -----------------------
