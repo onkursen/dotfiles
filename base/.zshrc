@@ -1,7 +1,7 @@
 # -------------------
 # COMMON DEPENDENCIES
 # -------------------
-export HELPERS_DIR="${HOME}/dotfiles/helpers"
+export HELPERS_DIR="$(git rev-parse --show-toplevel)/helpers"
 source "${HELPERS_DIR}/common.sh"
 
 # -----------------------
@@ -44,6 +44,6 @@ bindkey '^[^[[D' backward-word
 # Work helpers
 # -----------------
 local WORK_SH="$HELPERS_DIR/work.sh"
-source "${WORK_SH}" || touch "${WORK_SH}"
+[[ -f "${WORK_SH}" ]] && source "${WORK_SH}"
 alias workedit="vim ${WORK_SH}"
 alias work="vim ${WORK_SH}"

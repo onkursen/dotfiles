@@ -16,8 +16,7 @@ Released under the MIT license (see `LICENSE`).
 * [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro/releases/latest)
   * Download latest OTF fonts, unzip, and open to install
 * Sublime Text
-  * [Solarized](https://github.com/SublimeColors/Solarized)
-  * [Package Control](https://sublime.wbond.net/installation)
+  * [Spacegray Eighties]https://github.com/mhkeller/spacegray)
 * iTerm 2
   * [Spacegray Eighties theme](https://github.com/mhkeller/spacegray-eighties-iterm)
   * Enable infinite scrollback
