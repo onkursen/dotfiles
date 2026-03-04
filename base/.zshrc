@@ -34,16 +34,6 @@ PROMPT="[${TIME_S} | ${USER}:${CURRENT_DIR}${GIT_INFO}]
 # -------------
 # MISCELLANEOUS
 # -------------
-export EDITOR=vim
-
 # Map alt-right and alt-left to move between words
 bindkey '^[^[[C' forward-word
 bindkey '^[^[[D' backward-word
-
-# -----------------
-# Work helpers
-# -----------------
-local WORK_SH="$HELPERS_DIR/work.sh"
-[[ -f "${WORK_SH}" ]] && source "${WORK_SH}"
-alias workedit="vim ${WORK_SH}"
-alias work="vim ${WORK_SH}"

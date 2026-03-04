@@ -65,3 +65,12 @@ git-prune-branches() {
     done
   fi
 }
+
+# Colorized cat; use ccat if available, else fallback to system cat
+cat() {
+  if command -v ccat >/dev/null 2>&1; then
+    ccat "$@"
+  else
+    \cat "$@"
+  fi
+}
