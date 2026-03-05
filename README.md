@@ -2,12 +2,9 @@
 
 These are the configuration files that I use in my daily setup.  
 
-You can install using GNU Stow or by adjusting `HELPERS_DIR` in the
-preferred config file and then sourcing it.
-
 For a new Mac:
-* Download XCode and command line tools if necessary
-* Run `setup-mac.sh`.
+* Install XCode command line tools
+* Run `./setup-mac.sh`.
 
 Released under the MIT license (see `LICENSE`).
 
@@ -15,9 +12,13 @@ Released under the MIT license (see `LICENSE`).
 
 * [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro/releases/latest)
   * Download latest OTF fonts, unzip, and open to install
+  * Set font to Source Code Pro size 14 for all editors and terminals
 * Sublime Text
-  * [Spacegray Eighties]https://github.com/mhkeller/spacegray)
+  * [Spacegray Eighties](https://github.com/mhkeller/spacegray)
 * iTerm 2
-  * [Spacegray Eighties theme](https://github.com/mhkeller/spacegray-eighties-iterm)
+  * [Spacegray Eighties](https://github.com/mhkeller/spacegray-eighties-iterm)
   * Enable infinite scrollback
-  * Set font to Source Code Pro size 14
+* Kitty
+  * Spacegray Eighties: `kitty +kitten themes "Space Gray Eighties"`
+* Terminal
+  * [Spacegray Eighties](https://github.com/pmchung/osx-terminal-themes/blob/master/schemes/SpaceGray%20Eighties.terminal)
