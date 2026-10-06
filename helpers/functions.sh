@@ -36,7 +36,10 @@ restore() {
 }
 
 remove() {
-  shred $1 && rm -v $1
+  for f in "$@"
+  do
+    shred "$f" && rm -v "$f"
+  done
 }
 
 # Delete all local git branches except `main` and branches starting with `onkur`
