@@ -77,3 +77,7 @@ cat() {
     \cat "$@"
   fi
 }
+
+brewup() {
+  brew update && brew outdated && brew upgrade --no-ask && brew cleanup
+}
